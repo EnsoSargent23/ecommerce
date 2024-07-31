@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular
+dist/
+.angular/
+ecommerce/node_modules/
+
+# Docker
+.dockerignore
+docker-compose.override.yml  # Nur lokal relevante Überschreibungen ignorieren
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Editor-specific files
+*.swp

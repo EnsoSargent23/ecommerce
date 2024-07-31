@@ -1,0 +1,54 @@
+title Database Connection
+
+
+entryspacing 0.9
+participantgroup #lightblue **System Participants**
+
+participantgroup #orange WEBSITE
+participant WEBSITE
+end
+
+participantgroup #red SERVER
+participant SERVER
+end
+
+
+participantgroup #green DATABASE
+participant DB
+end
+
+participantgroup 
+fontawesome6regular 1F4B0 Paymentsystem #blue
+end
+end
+
+
+alt all products
+// Start Webseite : alle Artikel
+WEBSITE->SERVER: GET: /products/products
+SERVER-->DB: MYSQL: SELECT * FROM products
+SERVER <-- DB: JSON : all products
+SERVER <-- WEBSITE: JSON : all products
+else search
+WEBSITE->SERVER: GET: /products/products/product_id
+SERVER-->DB: MYSQL: SELECT * FROM products WHERE product_id=product_id
+SERVER <-- DB: JSON : product with the id
+SERVER <-- WEBSITE: JSON : product with the id
+else login
+WEBSITE->SERVER: POST: /customers/login {"email":"abc@hotmail.de","password":"password"}
+SERVER-->DB: MYSQL: SELECT password_hash FROM customers WHERE email = ?
+SERVER <-- DB: JSON : Customer
+SERVER <-- WEBSITE: RES : OK / ERROR
+else register
+WEBSITE->SERVER: POST : /customers/addCustomer DATA: {first_name, last_name, email, password_hash, phone, generated_at}
+SERVER-->DB: MYSQL: INSERT INTO customers (first_name, last_name, email, password_hash, phone, generated_at) VALUES (?, ?, ?, ?, ?, ?)
+SERVER <-- DB: OK / ERROR
+SERVER <-- WEBSITE: OK / ERROR
+else extern payment
+
+WEBSITE-->SERVER: route 
+SERVER --> Paymentsystem: redirect : stripes
+SERVER <-- Paymentsystem: OK / ERROR
+
+end
+
