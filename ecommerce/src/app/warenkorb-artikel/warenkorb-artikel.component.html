@@ -1,0 +1,20 @@
+<div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="artikel.bild"  class="card-img" [alt]="artikel.name">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" >{{artikel.name}}</h5>
+          <p class="card-text">{{artikel.beschreibung}}</p>
+          <p class="card-text">Preis: {{artikel.preis}}</p>
+          <div class="anzahl-bereich">
+            <button class="btn btn-danger">X</button>
+            <button class="btn btn-secondary" (click)="enfernt">-</button>
+            <input type="number" class="form-control anzahl-input" [value]="anzahl">
+            <button class="btn btn-secondary" (click)="addiert">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

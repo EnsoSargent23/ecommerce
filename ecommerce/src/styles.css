@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: Round;
+    src: url("./assets/fonts/MPLUSRounded1c-Black.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-Bold.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-ExtraBold.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-Light.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-Medium.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-Regular.ttf") format("truetype");
+    src: url("./assets/fonts/MPLUSRounded1c-Thin.ttf") format("truetype");
+  
+  }
+  
+  
+  body {
+    background-image: url("./assets/cafe.jpg"); /* Ersetze 'pfad/zum/oimage.jpg' durch den tatsächlichen Pfad zu deinem Bild */
+    background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Hintergrund abdeckt */
+    background-repeat: no-repeat; /* Das Bild wird nicht wiederholt */
+    background-attachment: fixed; /* Das Bild bleibt fest positioniert, wenn du scrollst */
+    background-color: rgba(255, 255, 255, 0.5); /* Hintergrundfarbe mit 50% Transparenz (weiß als Beispiel, du kannst die Farbe nach Bedarf ändern) */
+  }
+  
+  
+  

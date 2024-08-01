@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+
+
+<div class="container">
+    <h1 class="display-4">Kontakt - Firma XYZ</h1>
+
+    <h2>Kontaktinformationen:</h2>
+    <address>
+        Firma XYZ<br>
+        Musterstraße 123<br>
+        12345 Musterstadt<br>
+        Email: info at firma-xyz.com<br>
+        Telefon: +49 123 456789
+    </address>
+
+    <h2>Kontaktformular:</h2>
+    <form (ngSubmit)="sendenFormular()" #kontaktForm="ngForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="vorname">Vorname</label>
+                <input type="text" class="form-control" id="vorname" placeholder="Ihr Vorname" [(ngModel)]="vorname" name="vorname" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nachname">Nachname</label>
+                <input type="text" class="form-control" id="nachname" placeholder="Ihr Nachname" [(ngModel)]="nachname" name="nachname" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Ihre Email-Adresse" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="nachricht">Nachricht</label>
+            <textarea class="form-control" id="nachricht" rows="4" placeholder="Ihre Nachricht" [(ngModel)]="nachricht" name="nachricht" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!kontaktForm.valid">Nachricht senden</button>
+    </form>
+</div>
+
+
+<app-footer></app-footer>

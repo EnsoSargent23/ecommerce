@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    volumes:
+      - ./database/ecommerce.sql:/docker-entrypoint-initdb.d/ecommerce.sql
+    networks:
+      - ecommerce-net
+
+  api:
+    build: ./server
+    ports:
+      - "${PORT}:3000"
+    networks:
+      - ecommerce-net
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - PORT=${PORT}
+
+networks:
+  ecommerce-net:
+    driver: bridge

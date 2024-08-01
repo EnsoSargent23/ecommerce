@@ -1,0 +1,11 @@
+.search-box {
+    margin-top: 100px;
+    width: 300px;
+    border-radius: 20px; /* Abgerundete Ecken */
+}
+
+.search-btn {
+    margin-top: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

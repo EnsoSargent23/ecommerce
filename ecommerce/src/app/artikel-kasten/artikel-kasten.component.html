@@ -1,0 +1,18 @@
+<!-- Artikel-Komponente -->
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- artikel-kasten.component.html -->
+        <div class="card">
+          <img [src]="artikel.bild" class="card-img-top" alt="Artikel Bild">
+          <div class="card-body">
+            <h5 class="card-title">{{ artikel.name }}</h5>
+            <p class="card-text">{{ artikel.beschreibung }}</p>
+            <p class="card-text"><strong>Preis: ${{ artikel.preis }}</strong></p>
+            <button class="btn btn-primary" (onclick)="inWarenkorb()">Zum Warenkorb</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

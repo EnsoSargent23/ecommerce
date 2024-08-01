@@ -1,0 +1,12 @@
+<!-- alle-artikel.component.html -->
+<app-header></app-header>
+
+<div class="container" id="back">
+  <div class="row justify-content-center">
+    <div class="col-md-6" *ngFor="let artikel of artikelListe">
+      <app-artikel-kasten [artikel]="artikel"></app-artikel-kasten>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

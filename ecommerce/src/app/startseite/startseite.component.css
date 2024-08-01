@@ -1,0 +1,45 @@
+.jumbotron {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 0;
+}
+
+
+
+.sales-section {
+    padding: 50px 0;
+}
+
+.blog-section {
+
+    padding: 50px 0;
+    
+}
+
+.comment-section {
+    padding: 50px 0;
+}
+
+.card {
+    padding: 0.5em;
+    margin: 0.5em;
+    color: rgb(0, 0, 0) ;
+    border-radius: 25px 25px ;
+    border: solid rgba(247, 209, 174, 0.657) 0.25rem;
+    background-color: rgba(165, 227, 225, 0.756);
+
+}
+.card-img-top{
+    border-radius: 2em 2em;
+    border: solid rgba(255, 255, 255, 0.329) 0.25rem;
+}
+.card-title{
+    font-size: 2em;
+    font-family: Round;
+}
+.card-text {
+    font-size: 1rem;
+    font-style: oblique;
+    font-family: Round;
+}
