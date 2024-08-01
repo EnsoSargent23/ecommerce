@@ -1,0 +1,90 @@
+<div class="container">
+    <h2>Registrierung</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="name" type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="email">E-Mail:</label>
+        <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="E-Mail">
+    </div>
+    <div class="form-group">
+        <label for="passwort">Passwort:</label>
+        <input [(ngModel)]="passwort" type="password" class="form-control" id="passwort" placeholder="Passwort">
+    </div>
+    <div class="form-group">
+        <label for="confirmPasswort">Passwort bestätigen:</label>
+        <input [(ngModel)]="confirmPasswort" type="password" class="form-control" id="confirmPasswort" placeholder="Passwort bestätigen">
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Telefonnummer:</label>
+        <input [(ngModel)]="phoneNumber" type="tel" class="form-control" id="phoneNumber" placeholder="Telefonnummer">
+    </div>
+    <div class="form-group">
+        <label for="address">Adresse:</label>
+        <input [(ngModel)]="address" type="text" class="form-control" id="address" placeholder="Adresse">
+    </div>
+    <div class="form-group">
+        <label for="securityQuestion">Sicherheitsfrage:</label>
+        <select [(ngModel)]="securityQuestion" class="form-control" id="securityQuestion">
+            <option value="">Bitte wählen</option>
+            <option value="kindheitsfreund">Kindheitsfreund</option>
+            <option value="grundschullehrer">Grundschullehrer</option>
+            <option value="namehaustier">Name des Haustiers</option>
+            <option value="lieblingsspeise">Lieblingsspeise</option>
+            <option value="lieblingsroman">Lieblingsroman</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="agreement">Zustimmung:</label>
+        <div class="form-check">
+            <input [(ngModel)]="agreement" type="checkbox" class="form-check-input" id="agreement">
+            <label class="form-check-label" for="agreement">Ich stimme den Nutzungsbedingungen zu.</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newsletter">Newsletter-Abonnement:</label>
+        <div class="form-check">
+            <input [(ngModel)]="newsletter" type="checkbox" class="form-check-input" id="newsletter">
+            <label class="form-check-label" for="newsletter">Ich möchte den Newsletter abonnieren.</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="paymentOption">Bezahloption:</label>
+        <select [(ngModel)]="paymentOption" class="form-control" id="paymentOption">
+            <option value="">Bitte wählen</option>
+            <option value="bankverbindung">Bankverbindung</option>
+            <option value="paypal">PayPal</option>
+            <option value="kreditkarte">Kreditkarte</option>
+        </select>
+    </div>
+    <div *ngIf="paymentOption === 'bankverbindung'">
+        <div class="form-group">
+            <label for="bankName">Bankname:</label>
+            <input [(ngModel)]="bankName" type="text" class="form-control" id="bankName" placeholder="Bankname">
+        </div>
+        <div class="form-group">
+            <label for="bankBranch">Bankfiliale:</label>
+            <input [(ngModel)]="bankBranch" type="text" class="form-control" id="bankBranch" placeholder="Bankfiliale">
+        </div>
+        <div class="form-group">
+            <label for="iban">IBAN:</label>
+            <input [(ngModel)]="iban" type="text" class="form-control" id="iban" placeholder="IBAN">
+        </div>
+        <div class="form-group">
+            <label for="bic">BIC:</label>
+            <input [(ngModel)]="bic" type="text" class="form-control" id="bic" placeholder="BIC">
+        </div>
+    </div>
+    <div *ngIf="paymentOption === 'kreditkarte'">
+        <div class="form-group">
+            <label for="kartennummer">Kartennummer:</label>
+            <input [(ngModel)]="kartennummer" type="text" class="form-control" id="kartennummer" placeholder="Kartennummer">
+        </div>
+        <div class="form-group">
+            <label for="gueltigkeitsdatum">Gültigkeitsdatum:</label>
+            <input [(ngModel)]="gueltigkeitsdatum" type="text" class="form-control" id="gueltigkeitsdatum" placeholder="MM/YY">
+        </div>
+    </div>
+    <button (click)="registrierung()" class="btn btn-primary">Registrieren</button>
+</div>

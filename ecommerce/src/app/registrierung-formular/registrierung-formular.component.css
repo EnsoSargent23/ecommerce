@@ -1,0 +1,26 @@
+.container {
+    max-width: min-content;
+    margin-top: 0.5rem;
+    background-color: #bab7b787;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.468);
+    font-family: Round;
+}
+.container h2 {
+    text-align: center;
+    color: #000000;
+    font-family: Round;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.btn-primary {
+    margin: 0.5rem;
+    margin-left: 10em ;
+    padding: 0.5rem;
+    width: 10rem;
+}

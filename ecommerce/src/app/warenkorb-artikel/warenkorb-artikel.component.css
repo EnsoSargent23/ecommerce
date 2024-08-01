@@ -1,0 +1,40 @@
+/* Stil für den Kaufen-Button */
+.kaufen-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .kaufen-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Stil für den Bereich zum Erhöhen der Anzahl */
+  .anzahl-bereich {
+    padding: 2.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+
+  img{
+    padding: 1.5em;
+    border-radius: 5.5em 5.5rem;
+  }
+
+  .card {
+    border-radius: 5.5em 5.5em;
+  }
+
+  .anzahl-input {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 150px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+

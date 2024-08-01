@@ -1,0 +1,36 @@
+.profil-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .profil-header {
+    text-align: center;
+  }
+  
+  .profil-header h2 {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .profil-body {
+    margin-top: 20px;
+  }
+  
+  .profil-info {
+    margin-bottom: 15px;
+  }
+  
+  .profil-label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .profil-value {
+    margin-left: 10px;
+    color: #777;
+  }
+  

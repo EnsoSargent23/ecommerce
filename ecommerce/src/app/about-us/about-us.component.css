@@ -1,0 +1,19 @@
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1, h2 {
+    color: #007BFF;
+}
+
+p {
+    line-height: 1.6;
+}
+
+address {
+    margin-top: 20px;
+}

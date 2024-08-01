@@ -1,0 +1,18 @@
+#kasse {
+
+    height: 5.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5em;
+    color: white;
+    border: solid rgba(230, 224, 224, 0.815) 0.5em;
+    font-family: Round;
+    padding: 3em;
+    margin-bottom: 2em;
+    text-align: center;
+
+}
+
+button {
+    margin-left: 12.5em;
+    margin-bottom: 5em;
+}
