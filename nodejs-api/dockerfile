@@ -1,0 +1,15 @@
+# Dockerfile
+FROM node:18
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+# Remove node_modules if it exists
+RUN rm -rf node_modules
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]
